@@ -1,0 +1,33 @@
+<div class="container page">
+  <div class="top">
+    <div routerLink="/home" class="row btn-back">
+      <img src="assets/icon/Next.svg" alt="" srcset="">
+      <h2> {{requestParams.topic | titlecase}} </h2>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
+          <form class="search-input" (submit)="search()">
+            <img src="assets/icon/Search.svg" alt="searchIcon">
+            <input placeholder="Search" [ngModelOptions]="{standalone: true}" type=" text" [(ngModel)]="searchInput">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div infiniteScroll (scrolled)="loadMore()" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50">
+    <div class="row">
+      <div *ngFor="let book of bookResponse.results" (click)="viewBook(book)" class="col-4 book-card">
+        <img [src]="book.formats['image/jpeg']" alt="">
+        <label class="book-title"> {{book.title | titlecase}} </label>
+        <Label class="book-auther">{{ getAuthors(book) | titlecase}}</Label>
+      </div>
+    </div>
+    <div class="row">
+      <label *ngIf="loadingMore"> Loading... </label>
+      <label *ngIf="lockScrollLoad"> End </label>
+    </div>
+  </div>
+
+</div>

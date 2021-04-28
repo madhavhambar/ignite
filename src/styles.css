@@ -1,0 +1,168 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #5e56e7;
+  --primary-bg: #f8f7ff;
+  --secondary-bg: #f0f0f6;
+  --secondary-gray: #a0a0a0;
+  --secondary-dark-gray: #333333;
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(assets/font/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url(assets/font/Montserrat-SemiBold.ttf) format("truetype");
+}
+
+body {
+  font-size: 16px;
+  font-family: Montserrat-Regular;
+}
+
+.page {
+  background-color: var(--primary-bg);
+  height: 100vh;
+}
+
+.page .row {
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 48px;
+  color: var(--primary);
+  font-family: Montserrat-SemiBold;
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--primary);
+  font-family: Montserrat-SemiBold;
+}
+
+.banner {
+  width: 80%;
+  background-image: url(assets/icon/Pattern.svg);
+  margin: 20px;
+}
+
+.btn-label {
+  border-radius: 4px;
+  padding: 0 10px 0 10px;
+  height: 50px;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+  width: 100%;
+}
+.btn-label label {
+  font-family: Montserrat-Regular;
+  font-size: 20px;
+}
+
+.btn-icon {
+  height: 50px;
+  padding: 10px;
+}
+
+.btn-next {
+  padding: 10px;
+}
+
+.btn-label label {
+  margin: auto;
+  margin-left: 5px;
+}
+
+.search-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  background-color: var(--secondary-bg);
+  position: relative;
+}
+
+.search-input img {
+  margin: 10px;
+  height: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.search-input input {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 5px;
+  border: unset;
+  background-color: var(--secondary-bg);
+  font-family: Montserrat-SemiBold;
+  padding-left: 30px;
+  height: 100%;
+  caret-color: var(--primary);
+}
+
+form > input:focus {
+  outline: unset;
+  border: 1px solid var(--primary) !important;
+  border-radius: 4px;
+}
+
+.btn-back img {
+  height: 20px;
+  width: auto;
+  transform: rotateY(180deg);
+  margin: 15px 15px;
+}
+
+.btn-back h2 {
+  margin: inherit;
+}
+
+.book-card img {
+  width: 114px;
+  height: 162px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+}
+
+.book-title {
+  color: var(--secondary-dark-gray);
+  font-size: 12px;
+  display: inline-block;
+  white-space: nowrap;
+  /* width: 110px; */
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  font-family: Montserrat-SemiBold;
+  margin: 5px 0;
+}
+
+.book-auther {
+  color: var(--secondary-gray);
+  font-size: 12px;
+  display: inline-block;
+  white-space: nowrap;
+  /* width: 110px; */
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  font-family: Montserrat-SemiBold;
+  margin: 5px 0;
+}
+
+/* .top {
+  position: fixed;
+}
+
+#booksList {
+  margin-top: 90px;
+} */
